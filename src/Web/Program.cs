@@ -22,8 +22,6 @@ using Microsoft.eShopWeb.Web.Pages;
 using Microsoft.FeatureManagement;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Microsoft.eShopWeb.Web;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddConsole();
 
