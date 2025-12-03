@@ -23,6 +23,8 @@ using Microsoft.OpenApi.Models;
 using MinimalApi.Endpoint.Configurations.Extensions;
 using MinimalApi.Endpoint.Extensions;
 
+namespace Microsoft.eShopWeb.PublicApi;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpoints();
