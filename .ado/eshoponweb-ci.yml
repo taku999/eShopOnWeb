@@ -47,6 +47,13 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)'
         artifact: 'Website'
         publishLocation: 'pipeline'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)/Website'
+        artifactName: 'Website'
+        publishLocation: 'Container'
+
+
 
     - task: PublishPipelineArtifact@1
       displayName: Publish Artifacts ADO - Bicep
@@ -54,3 +61,8 @@ stages:
         targetPath: '$(Build.SourcesDirectory)/infra/webapp.bicep'
         artifact: 'Bicep'
         publishLocation: 'pipeline'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)/Website'
+        artifactName: 'Website'
+        publishLocation: 'Container'
