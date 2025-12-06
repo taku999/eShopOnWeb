@@ -63,6 +63,6 @@ stages:
         publishLocation: 'pipeline'
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)/Website'
-        artifactName: 'Website'
+        pathToPublish: '$(Build.SourcesDirectory)/infra/webapp.bicep'
+        artifactName: 'Bicep'
         publishLocation: 'Container'
