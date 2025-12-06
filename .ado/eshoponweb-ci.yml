@@ -49,7 +49,7 @@ stages:
         publishLocation: 'pipeline'
     - task: PublishBuildArtifacts@1
       inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)/Website'
+        pathToPublish: '$(Build.ArtifactStagingDirectory)'
         artifactName: 'Website'
         publishLocation: 'Container'
 
