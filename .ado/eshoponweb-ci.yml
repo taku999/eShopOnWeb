@@ -33,7 +33,19 @@ stages:
       inputs:
         command: 'test'
         projects: 'tests/UnitTests/*.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: Integration Tests
+      inputs:
+        command: 'test'
+        projects: 'tests/IntegrationTests/*.csproj'
     
+    - task: DotNetCoreCLI@2
+      displayName: Functional Tests
+      inputs:
+        command: 'test'
+        projects: 'tests/FunctionalTests/*.csproj'
+        
     - task: DotNetCoreCLI@2
       displayName: Publish
       inputs:
@@ -47,13 +59,11 @@ stages:
         targetPath: '$(Build.ArtifactStagingDirectory)'
         artifact: 'Website'
         publishLocation: 'pipeline'
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathToPublish: '$(Build.ArtifactStagingDirectory)'
-        artifactName: 'Website'
-        publishLocation: 'Container'
-
-
+#    - task: PublishBuildArtifacts@1
+#      inputs:
+#        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+#        artifactName: 'Website'
+#        publishLocation: 'Container'
 
     - task: PublishPipelineArtifact@1
       displayName: Publish Artifacts ADO - Bicep
@@ -61,8 +71,8 @@ stages:
         targetPath: '$(Build.SourcesDirectory)/infra/webapp.bicep'
         artifact: 'Bicep'
         publishLocation: 'pipeline'
-    - task: PublishBuildArtifacts@1
-      inputs:
-        pathToPublish: '$(Build.SourcesDirectory)/infra/webapp.bicep'
-        artifactName: 'Bicep'
-        publishLocation: 'Container'
+#    - task: PublishBuildArtifacts@1
+#      inputs:
+#        pathToPublish: '$(Build.SourcesDirectory)/infra/webapp.bicep'
+#        artifactName: 'Bicep'
+#        publishLocation: 'Container'
