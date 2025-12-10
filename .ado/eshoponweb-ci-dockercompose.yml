@@ -15,7 +15,7 @@ resources:
 variables:
   tag: '$(Build.BuildId)'
   resource-group: 'rg-az400-test'
-  location: 'centralus'
+  location: 'japanwest'
   templateFile: 'infra/acr.bicep'
   azureserviceconnection: 'azure subs'
   subscriptionId: 'fa9bad56-093e-485a-86f9-ca7b251fdf10'
