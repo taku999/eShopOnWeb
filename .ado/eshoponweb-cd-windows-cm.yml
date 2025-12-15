@@ -1,8 +1,8 @@
 variables:
-  resource-group: 'AZ400-EWebShop-NAME'
-  location: 'centralus'
+  resource-group: 'Bicep'
+  location: 'eastus'
   templateFile: 'infra/simple-windows-vm.bicep'
-  azureserviceconnection: 'azure subs'
+  azureserviceconnection: 'Bicep'
 
 stages:
 - stage: Deploy
