@@ -17,7 +17,7 @@ param publicIpName string = 'myPublicIP'
   'Dynamic'
   'Static'
 ])
-param publicIPAllocationMethod string = 'static'
+param publicIPAllocationMethod string = 'Static'
 
 @description('SKU for the Public IP used to access the Virtual Machine.')
 @allowed([
