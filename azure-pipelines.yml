@@ -9,7 +9,7 @@ variables:
   azureServiceConnection: "Bicep"
   resourceGroupName: "Bicep"
   location: "eastus"
-  templateFile: "main.bicep"
+  templateFile: "infra/main.bicep"
 pool:
   vmImage: $(vmImageName)
 
