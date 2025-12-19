@@ -1,0 +1,27 @@
+displayName: Test_12/19/2025_10:36:12 PM
+testPlan: quick_test.jmx
+description: ''
+engineInstances: 1
+testId: 5ba88f82-0731-4c20-9760-71b08833e02d
+testType: JMX
+splitAllCSVs: False
+referenceIdentities:
+- kind: KeyVault
+  type: SystemAssigned
+- kind: Metrics
+  type: SystemAssigned
+env:
+- name: domain
+  value: az400eshoponweb2324122070.azurewebsites.net
+- name: protocol
+  value: https
+- name: ramp_up_time
+  value: 60
+- name: duration_in_sec
+  value: 300
+- name: threads_per_engine
+  value: 50
+autoStop:
+  errorPercentage: 90
+  timeWindow: 60
+  maximumVirtualUsersPerEngine: 5000
