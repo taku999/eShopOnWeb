@@ -1,8 +1,8 @@
-displayName: Test_12/19/2025_10:36:12 PM
+displayName: ado_load_test
 testPlan: quick_test.jmx
 description: ''
 engineInstances: 1
-testId: 5ba88f82-0731-4c20-9760-71b08833e02d
+testId: ado_load_test
 testType: JMX
 splitAllCSVs: False
 referenceIdentities:
