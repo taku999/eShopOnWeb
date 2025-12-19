@@ -63,3 +63,14 @@ stages:
               WebAppName: 'az400eshoponweb2324122070'
               packageForLinux: '$(Build.ArtifactStagingDirectory)/**/Web.zip'
               AppSettings: '-UseOnlyInMemoryDatabase true -ASPNETCORE_ENVIRONMENT Development'
+          - task: AzureLoadTest@1
+            inputs:
+              azureSubscription: 'Azure サブスクリプション 1(fa9bad56-093e-485a-86f9-ca7b251fdf10)'
+              loadTestConfigFile: '‘$(Build.SourcesDirectory)/tests/jmeter/config.yaml’'
+              resourceGroup: 'az400m08l14-RG'
+              loadTestResource: 'eShopOnWebLoadTesting2025'
+              loadTestRunName: 'ado_run'
+              loadTestRunDescription: 'load testing from ADO'
+
+          - publish: $(System.DefaultWorkingDirectory)/loadTest
+            artifact: loadTestResults
